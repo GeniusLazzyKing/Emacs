@@ -1,0 +1,6 @@
+var/auto-save-list/*
+var/bookmarks/*
+var/recentf/*
+var/eshell/*
+var/.lsp-session-v1
+site-lisp/extension/*
