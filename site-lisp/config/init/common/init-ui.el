@@ -1,4 +1,3 @@
-
 ;;;;;;;;;; init-ui 模块 ;;;;;;;;;;
 ;;;; Desc:
 ;; 用于设置 Emacs 的基本用户界面配置
@@ -15,13 +14,10 @@
 ;; 滚动条
 (scroll-bar-mode -1)
 ;; 图标
-(use-package all-the-icons
-  :demand t
-  )
 (use-package nerd-icons
   :demand t
   :custom
-(nerd-icons-font-family "FiraCodeNerdFont")
+(nerd-icons-font-family "FiraCodeNerdFontMono")
   )
 ;; 分割线
 (use-package page-break-lines
