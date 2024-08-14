@@ -12,13 +12,15 @@
 (require 'init-editor)
 ;; 界面外观设置
 (require 'init-ui)
+;; 启动界面
+(require 'init-dashboard)
+;; 实用工具
+(require 'init-tools)
 ;;;; common end 
 
 ;;;; plugin start：插件初始化设置
 ;; 聊天
 (require 'init-chat)
-;; 重启Emacs
-(require 'init-restart-emacs)
 ;; Lsp
 (require 'init-lsp-mode)
 ;; 自动补全

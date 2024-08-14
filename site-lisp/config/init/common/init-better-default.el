@@ -7,6 +7,8 @@
 ;; 无依赖项
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 全屏
+(add-to-list 'default-frame-alist '(fullscreen . fullboth))
 ;; 确认提示
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; var文件路径
