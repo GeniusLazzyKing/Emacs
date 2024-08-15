@@ -7,7 +7,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(use-package vterm)
 (use-package restart-emacs)
+(use-package posframe)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
 (provide 'init-tools)

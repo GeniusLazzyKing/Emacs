@@ -7,8 +7,41 @@
 ;; 无依赖项
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 设置英文字体
+(set-face-attribute 'default nil :font "FiraCodeNerdFontMono 10")
+;; 设置中文字体
+(set-fontset-font t 'han "FiraCodeNerdFontMono 10")
+;; 括号高亮
+(show-paren-mode 1)
 ;; 全屏
 (add-to-list 'default-frame-alist '(fullscreen . fullboth))
+;; 关闭默认启动界面
+(setq inhibit-startup-message nil)
+;; 菜单栏
+(menu-bar-mode -1)
+;; 工具栏
+(tool-bar-mode -1)
+;; 滚动条
+(scroll-bar-mode -1)
+;; 光标样式
+(setq-default cursor-type 'box)
+;; 光标闪烁
+(blink-cursor-mode -1)
+;; 光标颜色
+(set-cursor-color "#d5c4a1")
+;; 当前行高亮
+(global-hl-line-mode 1)
+;; 设置行号模式
+(setq display-line-numbers-type 'relative)
+;; 全局启用行号显示
+(global-display-line-numbers-mode t)
+;; 制表符
+(setq-default indent-tabs-mode t)
+(setq-default tab-width 2)
+;; 显示时间
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
 ;; 确认提示
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; var文件路径

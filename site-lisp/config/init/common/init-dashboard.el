@@ -8,33 +8,48 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;; 启动界面
-(setq inhibit-startup-message nil)
 (use-package dashboard
-  :demand t
-  :config
-  ;; 启动时显示 Dashboard
-  (dashboard-setup-startup-hook)
-  ;; 标题和横幅
-  (setq dashboard-startup-banner "~/.emacs.d/var/banner/nerv.png")
-  (setq dashboard-banner-logo-title "Genius only means hard-working all one's life.")
-  ;; 居中显示
-  (setq dashboard-center-content t)
-  (setq dashboard-vertically-center-content t)
-  ;; 关闭每个部分的快捷方式指示
-  (setq dashboard-show-shortcuts nil)
-  ;; 设置显示的项目及数量
-  (setq dashboard-items '((recents   . 3)    ; 最近文件
-                          (bookmarks . 3)    ; 书签
-                          (projects  . 3)    ; 项目
-                          (agenda    . 3)    ; Org-agenda
-                          (registers . 3)))  ; 寄存器
-  ;; 自定义小部件的快捷方式
-  (setq dashboard-item-shortcuts '((recents   . "r")
-                                   (bookmarks . "m")
-                                   (projects  . "p")
-                                   (agenda    . "a")
-                                   (registers . "e")))
-  )
+	:demand t
+  :diminish dashboard-mode
+  :custom-face
+  (dashboard-heading ((t (:inherit (font-lock-string-face bold):foreground "#fb4934"))))
+  (dashboard-items-face ((t (:weight normal))))
+  (dashboard-no-items-face ((t (:weight normal))))
+	:hook
+	(dashboard-mode . (lambda () (setq-local frame-title-format nil)))
+	:init
+  (setq
+	 dashboard-banner-logo-title "Genius only means hard-working all one's life."
+   dashboard-startup-banner "~/.emacs.d/var/banner/nerv.png"
+   dashboard-center-content t
+   dashboard-vertically-center-content t
+   dashboard-show-shortcuts nil
+				
+   dashboard-items '((recents   . 3)
+                     (bookmarks . 3)
+                     (projects  . 3)
+                     (agenda    . 3)
+                     (registers . 3))
+				
+	 dashboard-item-shortcuts '((recents   . "r")
+                              (bookmarks . "m")
+                              (projects  . "p")
+                              (agenda    . "a")
+                              (registers . "e"))
+				
+	 dashboard-startupify-list '(dashboard-insert-banner
+                               dashboard-insert-newline
+                               dashboard-insert-banner-title
+                               dashboard-insert-newline
+                               dashboard-insert-navigator
+                               dashboard-insert-newline
+                               dashboard-insert-init-info
+                               dashboard-insert-items
+                               dashboard-insert-newline
+                               dashboard-insert-footer)
+	 )
+	(dashboard-setup-startup-hook)
+	)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
 (provide 'init-dashboard)

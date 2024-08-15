@@ -8,6 +8,8 @@
 (require 'init-package)
 ;; 主题设置
 (require 'init-theme)
+;; 图标设置
+(require 'init-icons)
 ;; 编辑设置
 (require 'init-editor)
 ;; 界面外观设置
@@ -16,6 +18,10 @@
 (require 'init-dashboard)
 ;; 实用工具
 (require 'init-tools)
+;; org-mode
+(require 'init-org)
+;; ivy
+(require 'init-ivy)
 ;;;; common end 
 
 ;;;; plugin start：插件初始化设置
