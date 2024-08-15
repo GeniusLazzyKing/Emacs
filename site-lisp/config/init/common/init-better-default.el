@@ -7,10 +7,10 @@
 ;; 无依赖项
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; 设置英文字体
-(set-face-attribute 'default nil :font "FiraCodeNerdFontMono 10")
+;; 设置等宽字体
+(set-face-attribute 'default nil :family "FiraCodeNerdFontMono 10")
 ;; 设置中文字体
-(set-fontset-font t 'han "FiraCodeNerdFontMono 10")
+(set-fontset-font t 'han (font-spec :family "FiraCodeNerdFontMono 10"))
 ;; 括号高亮
 (show-paren-mode 1)
 ;; 全屏

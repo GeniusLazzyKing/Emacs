@@ -7,14 +7,16 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-(use-package all-the-icons)
+(use-package all-the-icons
+	:demand t
+	)
 (use-package nerd-icons
   :demand t
   :custom
-(nerd-icons-font-family "FiraCodeNerdFont")
+(nerd-icons-font-family "FiraCodeNerdFontMono")
 )
 (use-package all-the-icons-ivy-rich
-  :ensure t
+  :demand t
   :init (all-the-icons-ivy-rich-mode 1))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

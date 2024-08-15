@@ -1,6 +1,6 @@
-;;;;;;;;;; init-dashboard模块 ;;;;;;;;;;
+;;;;;;;;;; init-dashboard 模块 ;;;;;;;;;;
 ;;;; Desc:
-;; 启动界面
+;; Dashboard
 ;;;; init-dashboard start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
@@ -19,8 +19,10 @@
 	(dashboard-mode . (lambda () (setq-local frame-title-format nil)))
 	:init
   (setq
-	 dashboard-banner-logo-title "Genius only means hard-working all one's life."
+	 dashboard-banner-logo-title "Welcome Back"
    dashboard-startup-banner "~/.emacs.d/var/banner/nerv.png"
+	 dashboard-set-heading-icons t
+	 dashboard-set-file-icons t
    dashboard-center-content t
    dashboard-vertically-center-content t
    dashboard-show-shortcuts nil
@@ -38,11 +40,8 @@
                               (registers . "e"))
 				
 	 dashboard-startupify-list '(dashboard-insert-banner
-                               dashboard-insert-newline
                                dashboard-insert-banner-title
-                               dashboard-insert-newline
                                dashboard-insert-navigator
-                               dashboard-insert-newline
                                dashboard-insert-init-info
                                dashboard-insert-items
                                dashboard-insert-newline
