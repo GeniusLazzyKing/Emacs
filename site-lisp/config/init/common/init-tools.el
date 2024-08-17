@@ -19,6 +19,7 @@
 	:bind
 	(("C-x y t" . 'youdao-dictionary-search-at-point)
 	 ("C-x y v" . ' youdao-dictionary-play-voice-at-point)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
 (provide 'init-tools)

@@ -11,8 +11,10 @@
 (use-package posframe)
 ;; 状态栏
 (use-package doom-modeline
-  :ensure t
-  :hook (after-init . doom-modeline-mode)
+  :hook
+	(after-init . doom-modeline-mode)
+	:init
+	(setq doom-modeline-buffer-file-name-style 'truncate-nil)
 )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

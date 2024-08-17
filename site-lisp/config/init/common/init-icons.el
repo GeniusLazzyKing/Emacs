@@ -7,13 +7,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-(use-package all-the-icons
-	:demand t
-	)
 (use-package nerd-icons
   :demand t
   :custom
-(nerd-icons-font-family "FiraCodeNerdFontMono")
+(nerd-icons-font-family "UbuntuNerdFont")
 )
 (use-package all-the-icons-ivy-rich
   :demand t

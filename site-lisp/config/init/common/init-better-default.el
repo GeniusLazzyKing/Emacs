@@ -7,10 +7,10 @@
 ;; 无依赖项
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; 设置等宽字体
-(set-face-attribute 'default nil :family "FiraCodeNerdFontMono 10")
+;; 设置英文字体
+(set-face-attribute 'default nil :family "FiraCodeNerdFontMono")
 ;; 设置中文字体
-(set-fontset-font t 'han (font-spec :family "FiraCodeNerdFontMono 10"))
+(set-fontset-font t 'han (font-spec :family "FiraCodeNerdFontMono"))
 ;; 括号高亮
 (show-paren-mode 1)
 ;; 全屏
@@ -29,8 +29,6 @@
 (blink-cursor-mode -1)
 ;; 光标颜色
 (set-cursor-color "#d5c4a1")
-;; 当前行高亮
-(global-hl-line-mode 1)
 ;; 设置行号模式
 (setq display-line-numbers-type 'relative)
 ;; 全局启用行号显示
@@ -38,10 +36,6 @@
 ;; 制表符
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 2)
-;; 显示时间
-(display-time-mode 1)
-(setq display-time-24hr-format t)
-(setq display-time-day-and-date t)
 ;; 确认提示
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; var文件路径
