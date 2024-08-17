@@ -8,6 +8,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(add-hook 'org-mode-hook 'org-indent-mode)
 (use-package org
   )
 (use-package org-bullets

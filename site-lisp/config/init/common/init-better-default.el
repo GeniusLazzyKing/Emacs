@@ -1,3 +1,4 @@
+
 ;;;;;;;;;; init-better-default 模块 ;;;;;;;;;;
 ;;;; Desc:
 ;; 优化 Emacs 的默认行为
