@@ -16,14 +16,6 @@
 (show-paren-mode 1)
 ;; 全屏
 (add-to-list 'default-frame-alist '(fullscreen . fullboth))
-;; 关闭默认启动界面
-(setq inhibit-startup-message nil)
-;; 菜单栏
-(menu-bar-mode -1)
-;; 工具栏
-(tool-bar-mode -1)
-;; 滚动条
-(scroll-bar-mode -1)
 ;; 光标样式
 (setq-default cursor-type 'box)
 ;; 光标闪烁
@@ -58,8 +50,6 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
-;; 垃圾回收
-(setq gc-cons-threshold most-positive-fixnum)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
 (provide 'init-better-default)
